@@ -19,7 +19,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
-public class frmChangeExchange extends JFrame {
+public class FrmChangeExchange extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textAmount;
@@ -37,7 +37,7 @@ public class frmChangeExchange extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					frmChangeExchange frame = new frmChangeExchange();
+					FrmChangeExchange frame = new FrmChangeExchange();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -49,7 +49,7 @@ public class frmChangeExchange extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public frmChangeExchange() {
+	public FrmChangeExchange() {
 		setTitle("Change Exchange");
 		setBackground(Color.WHITE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -206,7 +206,7 @@ public class frmChangeExchange extends JFrame {
 		contentPane.add(btnExit);
 		
 		JLabel lblImage = new JLabel("");
-		lblImage.setIcon(new ImageIcon(frmChangeExchange.class.getResource("/Lesson4/img/coin.jpg")));
+		lblImage.setIcon(new ImageIcon(FrmChangeExchange.class.getResource("/Lesson4/img/coin.jpg")));
 		lblImage.setBounds(240, 0, 228, 99);
 		contentPane.add(lblImage);
 	}
