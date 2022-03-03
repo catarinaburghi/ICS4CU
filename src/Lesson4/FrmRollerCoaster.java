@@ -3,11 +3,7 @@ package Lesson4;
 /*Catarina Burghi
  * Date: March 1st 2022
  * This program simulates requirement calculator to check if 
-<<<<<<< HEAD
  * a person can ride a roller coaster using an if statement and boolean operators.
-=======
- * a person can ride a roller coaster.
->>>>>>> main
  */
 import java.awt.EventQueue;
 import javax.swing.JFrame;
