@@ -14,7 +14,6 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import java.awt.CardLayout;
 import javax.swing.JLabel;
-import net.miginfocom.swing.MigLayout;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
