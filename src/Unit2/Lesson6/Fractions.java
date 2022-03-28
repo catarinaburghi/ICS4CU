@@ -1,4 +1,4 @@
-package Unit2.Lesson6.FractionsOOP;
+package Unit2.Lesson6;
 
 public class Fractions {
     
