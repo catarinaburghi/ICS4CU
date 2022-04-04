@@ -1,4 +1,9 @@
 package Unit2.Lesson10;
+/*Catarina Fagundes Burghi
+ * Date: April 4th 2022
+ * This program is a step by step assignment that uses a class to deal with 
+ * converting CAD to USD.
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -70,17 +75,21 @@ public class FrmCurrencyConverter extends JFrame {
 		lblAnswer.setBounds(145, 195, 146, 14);
 		contentPane.add(lblAnswer);
 		
+		// action button 
 		JButton btnConvert = new JButton("Convert to USD");
 		btnConvert.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
+				// initializing the class
                 Currency converter = new Currency();
 
+				// declaring variables
                 BigDecimal Answer;
                 BigDecimal rate = new BigDecimal("1.25");
                 BigDecimal cad = new BigDecimal(txtCAD.getText());
 
+				// Calling the function in our class to output the answer
                 Answer = converter.convert(cad, rate);
                 lblAnswer.setText("USD = $ " + (Answer));
 			}
