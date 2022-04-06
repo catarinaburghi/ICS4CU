@@ -1,5 +1,9 @@
 package Unit2.Lesson10;
-
+/*Catarina Fagundes Burghi
+ * Date: April 5th 2022
+ * This program is a step by step assignment that uses a class to deal to calculate the 
+ * average of 4 ints and also uses a different class for outputting errors
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -88,30 +92,62 @@ public class FrmAverageCalculator extends JFrame {
 		txtGrade4.setBounds(110, 140, 39, 20);
 		contentPane.add(txtGrade4);
 		txtGrade4.setColumns(10);
+
+		JLabel lblAverage = new JLabel("");
+		lblAverage.setBounds(228, 81, 163, 14);
+		contentPane.add(lblAverage);
 		
+		// action button 
 		JButton btnCalculate = new JButton("Calculate Average");
 		btnCalculate.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
-                Calculator average = new Calculator();
+				// initializing class
+                Calculator ac = new Calculator();
 
+				// declaring variables
                 int mark1, mark2, mark3, mark4;
-                int Average;
+				int average;
 
+				// try and catch statement to handle exceptions
+				try{
+
+				// getting user input from text boxes
                 mark1=Integer.parseInt(txtGrade1.getText());
 				mark2=Integer.parseInt(txtGrade2.getText());
 				mark3=Integer.parseInt(txtGrade3.getText());
 				mark4=Integer.parseInt(txtGrade4.getText());
 
-                
+				// calling the function in our class to calculate the average
+                average = ac.averagecalculate(mark1, mark2, mark3, mark4);
+
+				// outputting the answer
+				lblAverage.setText("The average is " + average);
+
+					// printing errors to indicate that something is wrong to the user
+				} catch (NumberFormatException c){
+					
+					// Printing message on console
+					System.out.println("Something went wrong");
+					System.out.println("Please only enter numbers");
+
+					// Dialog window
+					//Shell shell = new Shell();
+					//MessageBox dialog = new MessageBox(shell, SWT.ERROR | SWT.OK | SWT.CANCEL);
+					//dialog.setText("Error");
+					//dialog.setMessage("One of the fields has invalid data");
+					//dialog.open();
+
+					
+					//JOptionPane
+					DialogWindow pane = new DialogWindow();
+
+				}
 			}
 		});
 		btnCalculate.setBounds(228, 46, 163, 23);
 		contentPane.add(btnCalculate);
 		
-		JLabel lblAverage = new JLabel("");
-		lblAverage.setBounds(228, 81, 163, 14);
-		contentPane.add(lblAverage);
 	}
 }
