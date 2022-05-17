@@ -33,7 +33,7 @@ public class FrmMatchingGame extends JFrame {
 	ArrayList <String> cards = new ArrayList();
 	ArrayList <String> set = new ArrayList();
 
-	
+	// Initialazing images
     ImageIcon a = new ImageIcon("C:\\Users\\cfbur\\OneDrive\\Documentos\\ICS4U\\src\\Unit3\\Lesson14\\img\\audi.png"); // audi
     ImageIcon b = new ImageIcon("C:\\Users\\cfbur\\OneDrive\\Documentos\\ICS4U\\src\\Unit3\\Lesson14\\img\\ferrari.jpg"); // ferrari
     ImageIcon c = new ImageIcon("C:\\Users\\cfbur\\OneDrive\\Documentos\\ICS4U\\src\\Unit3\\Lesson14\\img\\lamborghini.jpg"); // good size
@@ -43,6 +43,7 @@ public class FrmMatchingGame extends JFrame {
     ImageIcon back = new ImageIcon("C:\\Users\\cfbur\\OneDrive\\Documentos\\ICS4U\\src\\Unit3\\Lesson14\\img\\tire.jpg"); // good size
     ImageIcon done = new ImageIcon("C:\\Users\\cfbur\\OneDrive\\Documentos\\ICS4U\\src\\Unit3\\Lesson14\\img\\finish.png"); // good size
 
+	// Initializing variables for the cards
 	int count, c1, c2, card1, card2;
 	int cardsleft = 12;
 	int [] change = new int [12];
